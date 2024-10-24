@@ -13,7 +13,7 @@ const {
 const {isLoggedIn, isAdmin} = require("../middlewares/authMiddleware");
 
 router.post("/add-bus", isLoggedIn, isAdmin, AddBus);
-router.post("/get-all-buses", isLoggedIn, GetAllBuses);
+router.get("/get-all-buses", isLoggedIn, GetAllBuses);
 router.put("/:id", isLoggedIn, isAdmin, UpdateBus);
 router.delete("/:id", isLoggedIn, isAdmin, DeleteBus);
 router.get("/:id", isLoggedIn, GetBusById);
