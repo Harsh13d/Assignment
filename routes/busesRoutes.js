@@ -19,5 +19,4 @@ router.delete("/:id", isLoggedIn, isAdmin, DeleteBus);
 router.get("/:id", isLoggedIn, GetBusById);
 router.post("/get", isLoggedIn, GetBusesByFromAndTo);
 router.post("/getETA", isLoggedIn, GetEstimatedTimeForStop);
-
 module.exports = router;

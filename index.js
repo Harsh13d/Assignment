@@ -21,8 +21,8 @@ mongoose
   .then(() => console.log("Successfully connected to mongodb"))
   .catch((err) => console.log(err));
 
-let limiter = ratelimit({max:1000,windowMs:60*60*1000,message:'We have recived to many request from this IP. Please try after one hour'});
-app.use('/api,limiter');
+let limiter = rateLimit({max:1000,windowMs:60*60*1000,message:'We have recived to many request from this IP. Please try after one hour'});
+// app.use('/api,limiter');
 app.use("/api/users", require("./routes/usersRoutes"));
 app.use("/api/buses", require("./routes/busesRoutes"));
 app.use("/api/auth", require("./routes/authRoutes"));
