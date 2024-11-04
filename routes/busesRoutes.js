@@ -9,7 +9,7 @@ const {
   GetBusById,
   GetBusesByFromAndTo,
   GetEstimatedTimeForStop,
-} = require("../controllers/busController");
+} = require("../Controllers/busController");
 const {isLoggedIn, isAdmin} = require("../middlewares/authMiddleware");
 
 router.post("/add-bus", isLoggedIn, isAdmin, AddBus);

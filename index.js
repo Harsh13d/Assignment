@@ -4,13 +4,15 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const rateLimit = require('express-rate-limit');
 const bodyParser = require("body-parser");
+const status = require("express-status-monitor");
 const app = express();
 
 require("dotenv").config();
 
-app.use(cookieParser());
+app.use(cookieParser());  // cookie acsess and cookie set
 app.use(cors());
-app.use(express.json());
+app.use(express.json({limit: "16kb"}));
+app.use(status());
 // app.use(bodyParser.json());
 
 const port = process.env.PORT || 3000;

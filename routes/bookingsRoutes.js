@@ -8,7 +8,7 @@ const {
   GetAllBookingsByUser,
   CancelBooking,
   BookNoOfSeat,
-} = require("../controllers/bookingController");
+} = require("../Controllers/bookingController");
 
 router.post("/book-seat", isLoggedIn, BookSeat);
 router.post("/book-n-seat", isLoggedIn, BookNoOfSeat);
